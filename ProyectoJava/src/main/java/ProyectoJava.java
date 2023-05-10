@@ -81,7 +81,6 @@ public class ProyectoJava {
         }
 
         funtions.cls();
-        System.out.print(logPassword);
         System.out.println(textoBienvenida);
         System.out.println(listOptions);
 
