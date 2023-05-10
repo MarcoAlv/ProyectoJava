@@ -11,7 +11,7 @@ public class Funcs {
     }
 
     public void CreateDataBase() {
-/* 
+        
         try {
             Conexion cc = new Conexion();
             Connection cn = cc.conn();
@@ -26,7 +26,6 @@ public class Funcs {
         }
 
 
-*/
     }
 
     public boolean userValidation(String user, String password) {
