@@ -1,12 +1,5 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Project/Maven2/JavaApp/src/main/java/${packagePath}/${mainClassName}.java to edit this template
- */
 
 import java.util.Scanner;
-
-import javax.security.sasl.SaslException;
-import java.sql.*;
 
 import generator.password.PasswordGenerator;
 
@@ -23,7 +16,7 @@ public class ProyectoJava {
 
     
     public static final Scanner input = new Scanner(System.in);
-    public static final Funcs funtions = new Funcs();
+    public static final Funcs functions = new Funcs();
 
     public static void main(String[] args) {
         
@@ -65,6 +58,7 @@ public class ProyectoJava {
         user = input.nextLine();
 
         Console cons;
+        
         if((cons = System.console())!=null) {
 
             char [] password = cons.readPassword("Contraseña :");
@@ -76,19 +70,19 @@ public class ProyectoJava {
         }
 
 
-        if (!(user.equals("admin") && logPassword.equals("admin"))) {
+        if (!(functions.userValidation(user, logPassword))) {
             return;
         }
 
-        funtions.cls();
+        functions.cls();
         System.out.println(textoBienvenida);
         System.out.println(listOptions);
 
         int opcionElegida;
 
-        System.out.println("opción:");
+        System.out.println("opción: ");
         opcionElegida = input.nextInt();
-
+ 
         switch (opcionElegida) {
             case 1:
                 System.out.println(PasswordGenerator.passwordGenerator());
