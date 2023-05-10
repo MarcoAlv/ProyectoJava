@@ -74,7 +74,9 @@ public class ProyectoJava {
             return;
         }
 
+
         functions.cls();
+
         System.out.println(textoBienvenida);
         System.out.println(listOptions);
 
