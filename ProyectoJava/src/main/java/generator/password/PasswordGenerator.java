@@ -136,8 +136,7 @@ public class PasswordGenerator {
             password.setCharAt(i, password.charAt(randomIndex));
             password.setCharAt(randomIndex, temp);
         }
-
-
+        
         return password.toString();
 
 
