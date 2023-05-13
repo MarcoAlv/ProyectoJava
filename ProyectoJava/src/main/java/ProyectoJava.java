@@ -41,14 +41,14 @@ public class ProyectoJava {
 
         String textoBienvenida = 
         "#########################\n" +
-        "| Gestor de contraseñas |\n" +
+        "| Gestor de contrase\u00f1as |\n" +
         "#########################\n" ;
 
-        String listOptions = "(1) Crer nueva contraseña\n" +
-        "(2) Mostrar Lista de contraseñas\n" +
-        "(3) Eliminar contraseña\n" +
-        "(4) Importar contraseñas\n" +
-        "(5) Cerrar sesión\n";
+        String listOptions = "(1) Crer nueva contrase\u00f1a\n" +
+        "(2) Mostrar Lista de contrase\u00f1as\n" +
+        "(3) Eliminar contrase\u00f1a\n" +
+        "(4) Importar contrase\u00f1as\n" +
+        "(5) Cerrar sesi\u00f3n\n";
 
 
         System.out.println(textoBienvenida);
@@ -61,7 +61,7 @@ public class ProyectoJava {
         
         if((cons = System.console())!=null) {
 
-            char [] password = cons.readPassword("Contraseña :");
+            char [] password = cons.readPassword("Contrase\u00f1a :");
             logPassword = new String (password);
 
         } else
@@ -82,7 +82,7 @@ public class ProyectoJava {
 
         int opcionElegida;
 
-        System.out.println("opción: ");
+        System.out.println("opci\u00f3n: ");
         opcionElegida = input.nextInt();
  
         switch (opcionElegida) {
