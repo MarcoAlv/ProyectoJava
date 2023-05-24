@@ -100,7 +100,7 @@ public class PasswordGenerator {
                 options[3] = 2; continue;
             } else {if (options[3] == 1) {all += data[3];}}
 
-            System.out.println("Introdusca la longitud de la contraseña (8 - 60):");
+            System.out.println("Introduzca la longitud de la contrase\u00f1a (8 - 60):");
             if (lenght == 2) { 
                 lenght = input.nextInt();
             } else {
