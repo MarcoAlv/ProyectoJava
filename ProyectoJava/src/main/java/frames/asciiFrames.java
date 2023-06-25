@@ -33,7 +33,7 @@ public class asciiFrames {
                     (2) Crear cuenta
                     """;
 
-    public void createUserFrame() {
+    public static void createUserFrame() {
         while (true) {
 
             functions.cls();
@@ -118,7 +118,7 @@ public class asciiFrames {
         }
     }
 
-    public void loggingFrame() {
+    public static void loggingFrame() {
         functions.cls();
         String user, logPassword = "";
 
@@ -152,7 +152,7 @@ public class asciiFrames {
 
     }
 
-    public void mainFrame(){
+    public static void mainFrame(){
         throw new java.lang.UnsupportedOperationException("Not supported yet.");
     }
 
