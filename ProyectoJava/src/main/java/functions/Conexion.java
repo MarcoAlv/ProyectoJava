@@ -1,20 +1,23 @@
 
 package functions;
-import java.sql.*;
+
+import org.sqlite.mc.SQLiteMCConfig;
+
+import java.sql.Connection;
 
 public class Conexion {
-    public Connection conn() {
+    public Connection conn(String databaseName, String key) {
 
-        Connection conn = null;
+        String urlTarget = String.format("jdbc:sqlite:file:%s.db", databaseName);
+
         try {
-    
-            conn = DriverManager.getConnection("jdbc:sqlite:users.db");
+
+            return new SQLiteMCConfig.Builder().withKey(key).build().createConnection(urlTarget);
 
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
-
-        return conn;
+        return null;
     }
     
 }
