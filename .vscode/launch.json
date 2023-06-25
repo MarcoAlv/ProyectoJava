@@ -14,7 +14,10 @@
             "type": "java",
             "name": "ProyectoJava",
             "request": "launch",
+<<<<<<< HEAD
             "classPaths": ["${fileDirname}.;sqlite-jdbc-(VERSION).jar"],
+=======
+>>>>>>> main
             "mainClass": "ProyectoJava",
             "projectName": "ProyectoJava"
         },

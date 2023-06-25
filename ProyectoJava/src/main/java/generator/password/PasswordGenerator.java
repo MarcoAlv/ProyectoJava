@@ -101,18 +101,52 @@ public class PasswordGenerator {
             } else {if (options[3] == 1) {
                 all.append(data[3]);}}
 
+<<<<<<< HEAD
             System.out.println("Introdusca la longitud de la contraseña (8 - 60):");
 
 
             if (length < 8 || length > 60) {
                 length = input.nextInt();
+=======
+            System.out.println("Introduzca la longitud de la contrase\u00f1a (8 - 60):");
+            if (lenght == 2) { 
+                lenght = input.nextInt();
+>>>>>>> main
             } else {
                 input.close();
                 break;
             }
         }
         
+<<<<<<< HEAD
         return Func.passwordGen(options, all.toString(), length);
+=======
+        StringBuilder password = new StringBuilder();
+        int selected = 0;
+
+        for (int i = 0; i < 4; i++) {
+
+            if (options[i] == 1) {
+                password.append(getRandomCharacter(data[i]));
+                selected++;
+            }
+
+        }
+
+        for (int i = selected; i < lenght; i++) {
+            password.append(getRandomCharacter(all));
+        }
+
+        // Mezcla los caracteres para que no estén en orden predecible
+        for (int i = 0; i < lenght; i++) {
+            int randomIndex = random.nextInt(lenght);
+            char temp = password.charAt(i);
+            password.setCharAt(i, password.charAt(randomIndex));
+            password.setCharAt(randomIndex, temp);
+        }
+        
+        return password.toString();
+>>>>>>> main
 
 
     }

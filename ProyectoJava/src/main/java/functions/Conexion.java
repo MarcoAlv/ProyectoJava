@@ -1,5 +1,6 @@
 
 package functions;
+<<<<<<< HEAD
 
 import org.sqlite.mc.SQLiteMCConfig;
 
@@ -13,11 +14,27 @@ public class Conexion {
         try {
 
             return new SQLiteMCConfig.Builder().withKey(key).build().createConnection(urlTarget);
+=======
+import java.sql.*;
+
+public class Conexion {
+    public Connection conn() {
+
+        Connection conn = null;
+        try {
+    
+            conn = DriverManager.getConnection("jdbc:sqlite:users.db");
+>>>>>>> main
 
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
+<<<<<<< HEAD
         return null;
+=======
+
+        return conn;
+>>>>>>> main
     }
     
 }
