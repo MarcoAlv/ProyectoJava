@@ -34,6 +34,7 @@ public class asciiFrames {
                     """;
 
     public static void createUserFrame() {
+
         while (true) {
 
             functions.cls();
@@ -118,7 +119,9 @@ public class asciiFrames {
         }
     }
 
+
     public static void loggingFrame() {
+
         functions.cls();
         String user, logPassword = "";
 
@@ -152,11 +155,13 @@ public class asciiFrames {
 
     }
 
+
     public static void mainFrame(){
         throw new java.lang.UnsupportedOperationException("Not supported yet.");
     }
 
     public static void startFrame() {
+
 
         while (true) {
             functions.cls();
