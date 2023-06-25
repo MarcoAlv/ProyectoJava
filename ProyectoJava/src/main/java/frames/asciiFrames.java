@@ -156,7 +156,7 @@ public class asciiFrames {
         throw new java.lang.UnsupportedOperationException("Not supported yet.");
     }
 
-    public void startFrame() {
+    public static void startFrame() {
 
         while (true) {
             functions.cls();
