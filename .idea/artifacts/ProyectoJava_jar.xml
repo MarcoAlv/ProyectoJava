@@ -1,0 +1,12 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="ProyectoJava:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/ProyectoJava_jar</output-path>
+    <root id="archive" name="ProyectoJava.jar">
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/ProyectoJava/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="module-output" name="ProyectoJava" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/ProyectoJava/src/main/java/sqlite-jdbc-3.41.2.0.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
