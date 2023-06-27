@@ -101,26 +101,19 @@ public class PasswordGenerator {
             } else {if (options[3] == 1) {
                 all.append(data[3]);}}
 
-<<<<<<< HEAD
-            System.out.println("Introdusca la longitud de la contraseña (8 - 60):");
-
+            System.out.println("Introduzca la longitud de la contraseña (8 - 60):");
 
             if (length < 8 || length > 60) {
                 length = input.nextInt();
-=======
-            System.out.println("Introduzca la longitud de la contrase\u00f1a (8 - 60):");
-            if (lenght == 2) { 
-                lenght = input.nextInt();
->>>>>>> main
             } else {
                 input.close();
                 break;
             }
         }
         
-<<<<<<< HEAD
         return Func.passwordGen(options, all.toString(), length);
-=======
+        
+/*======= (Creo que todo esto ya está implementado en el método passwordGen())
         StringBuilder password = new StringBuilder();
         int selected = 0;
 
@@ -146,7 +139,7 @@ public class PasswordGenerator {
         }
         
         return password.toString();
->>>>>>> main
+>>>>>>> main*/
 
 
     }
