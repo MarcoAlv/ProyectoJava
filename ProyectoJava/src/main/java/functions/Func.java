@@ -27,6 +27,9 @@ public class Func {
         connectionUsersDataBase = connector.conn("file", "Key");
     }
 
+    /**
+     * Limpia la pantalla
+     */
     public void cls() {
         
         System.out.print("\033[H\033[2J");
@@ -47,7 +50,19 @@ public class Func {
 
 
     }
-
+    
+    /**
+     * Recopila los datos ingresados al momento de crear un usuario para acceder y los guarda en la base de datos.
+     * @param id La id con la que se insertará en la base de datos. Obtenida de getMaxId()
+     * @param name El nombre de la cuenta
+     * @param last_name El apellido de la cuenta
+     * @param user_name El nombre de usuario de la cuenta
+     * @param password La contraseña de la cuenta
+     * @param age La edad de la persona que desea crear la cuenta
+     * @param cell El número de teléfono a asignar a la cuenta
+     * @param url
+     * @return "true" si la operación se realiza con exito, caso contrario retorna "false".
+     */
     public boolean createUser(int id, String name, String last_name, String user_name,
                               String password, int age, int cell, String url) {
 
@@ -88,6 +103,13 @@ public class Func {
         }
     }
 
+    /**
+     * Compara el nombre de usuario y la contraseña ingresada por el usuario al acceder con las credenciales de acceso
+     * ya existentes en la base de datos.
+     * @param user El nombre de usuario ingresado al intentar acceder.
+     * @param password La contraseña ingresada al intentar acceder.
+     * @return "true" si las credenciales coinciden con las de la base de datos, "false" si no coinciden.
+     */
     public boolean userValidation(String user, String password) {
 
         try {
@@ -151,15 +173,25 @@ public class Func {
         return characterSet.charAt(randomIndex);
     }
 
-
+    /**
+     * Compara el nombre de usuario y la contraseña ingresada por el usuario al acceder con las credenciales de acceso
+     * ya existentes en la base de datos.
+     * @param user El nombre de usuario ingresado al intentar acceder.
+     * @param password La contraseña ingresada al intentar acceder.
+     * @return "true" si las credenciales coinciden con las de la base de datos, "false" si no coinciden.
+     */
     public String[][] ReadCSV(String pathname){
         try{
             File getFile = new File(pathname);
             Scanner reader = new Scanner(getFile);
+
+            //Primeramente se guardan los datos recogidos en una list
             List<String[]> readFile = new ArrayList<>();
             while (reader.hasNext()){
                 readFile.add(reader.next().split(","));
             }
+
+            //Luego, los datos en la list son pasados a un array de 2 dimensiones.
             String [][] retornoCSV = new String [readFile.size()][];
             readFile.toArray(retornoCSV);
             return retornoCSV;
